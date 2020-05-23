@@ -1,2 +1,2 @@
-# Aesthetic_Function_Graphposting
-Creating nice pure math related visualizations here
+# Aesthetic Function Graphposting
+Yes, I'm referring to the Facebook group
