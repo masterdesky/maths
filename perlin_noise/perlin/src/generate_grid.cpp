@@ -103,7 +103,7 @@ vec_3d<double> create_sub_grid(int res,
 																	{x_max/2, x_max, y_max/2, y_max}	
 																};
 
-		// Placeholder for the concatenated four subcell in the
+		// Placeholder for the concatenated four subcell inside the current cell
 		vec_2d<double> temp_cell;
 
 		// Finally the actual iteration over the cell corners
@@ -206,6 +206,7 @@ vec_2d<double> get_dist_vector_field(int res,
 vec_2d<double> get_dot_product(int nrows, int ncols, int res,
 															 vec_2d<double>const &coordinates,
 															 vec_2d<int> const &cells,
+															 vec_2d<double> const &gradient_field,
 															 vec_2d<double> const &dist_vector_field)
 {
 	// Placeholder for the dot-product table

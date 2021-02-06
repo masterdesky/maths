@@ -28,6 +28,7 @@ vec_2d<double> get_dist_vector_field(int res,
 vec_2d<double> get_dot_product(int nrows, int ncols, int res,
 															 vec_2d<double>const &coordinates,
 															 vec_2d<int> const &cells,
+															 vec_2d<double> const &gradient_field,
 															 vec_2d<double> const &dist_vector_field);
 
 // Write a 2D vector into a file with arbitrary variables
