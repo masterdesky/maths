@@ -82,7 +82,7 @@ vec_3d<double> create_sub_grid(int res,
 	// i : index of a cell
 	for(std::size_t i = 0; i < cells.size(); i++)
 	{
-		// Identify coordinates of the current cell's limits
+		// Identify coordinates of the current cell's borders
 		double x_min = coordinates[cells[i][0]][0]; // x_min from bottom left corner
 		double y_min = coordinates[cells[i][0]][1]; // y_min from bottom left corner
 		double x_max = coordinates[cells[i][3]][0]; // x_max from upper right corner

@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 	int ncols = std::stoi(argv[2]);
 
 	// Resolution of sub-cells
-	// A regular cell consists of 4 sub-cells with `res`x`res` number of points
+	// A regular cell consists of 4 sub-cells with `res`x`res` number of points each
 	int res = std::stoi(argv[3]);
 
 	// Create the coordinate grid
@@ -52,10 +52,10 @@ int main(int argc, char *argv[])
 																"../data/gradient_field.txt");
 
 	// Calculate the distance vectors for sub-cells
-	auto distance_vector_field = get_dist_vector_field(res,
+	auto dist_vector_field = get_dist_vector_field(res,
 																										 coordinates, cells);
-	write_to_file<vec_2d<double>>(distance_vector_field,
-																"../data/distance_vector_field.txt");
+
+	// Calculate the dot products for all the sub-cell coordinates
 
 	return(0);
 }

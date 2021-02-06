@@ -1,12 +1,12 @@
+SDIR			=		src
+ODIR			=		obj
+IDIR			=		include
+#LDIR			=		lib
+LIBS			=		-lm
+
 CC				=		clang++ -std=c++17
 OPTIMIZE	=		-O3 -Wall
-IDIR			=		include
-SDIR			=		src
 CFLAGS		=		$(OPTIMIZE) -I$(IDIR)
-
-ODIR			=		obj
-LDIR			=		lib
-LIBS			=		-lm
 
 _DEPS			=		template.h generate_grid.h
 DEPS			=		$(patsubst %,$(IDIR)/%,$(_DEPS))
