@@ -17,7 +17,7 @@ for file in os.listdir(path):
 file_list.sort(key=lambda x: int(''.join(filter(str.isdigit, x))))
 
 # Define writer and create video
-writer = imageio.get_writer(out + 'hypercube_rotate.mp4', fps=30)
+writer = imageio.get_writer(out + 'hypercube_rotate.mp4', fps=60)
 
 for i, im in enumerate(file_list):
     text = '[{0}] Appending image #{1}...'.format(datetime.now().isoformat(), i)
