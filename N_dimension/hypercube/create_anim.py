@@ -4,7 +4,7 @@ import imageio
 from datetime import datetime
 
 path = './output/'
-out = './'
+out = './videos/'
 
 # Gather path to appropriate images to concatenate
 print('[{0}] Reading in list of images to concatenate'.format(datetime.now().isoformat()), file=sys.stderr)
