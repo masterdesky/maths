@@ -1,3 +1,4 @@
 # Outputs are usually large, so exclude them
+out/
 output/
 videos/
