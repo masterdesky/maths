@@ -133,9 +133,28 @@ def NR_fractal_get_frames(gl_s, gl_e, n_frames=50):
   v_s = np.array(list(product(*gl_s)))
   v_e = np.array(list(product(*gl_e)))
 
-  v_coords = np.linspace(v_s, v_e, n_frames)
+  sg = np.sign(v_s - v_e)
+  f_s = v_s - v_e
+  f_e = np.zeros_like(v_s) + 1e-06 * sg
+
+  v_coords = np.geomspace(f_s, f_e, n_frames) + v_e
   
   return v_coords
+
+def NR_fractal_get_grid_lims(v_coords):
+  
+  # Shorten variable names
+  v1, v2 = v_coords[:,0], v_coords[:,3]
+  
+  grid_lims =\
+  tuple(
+    tuple(
+      ( (xmin, xmax),(ymin, ymax) )
+    )
+    for xmin, xmax, ymin, ymax in zip(v1[:,0], v2[:,0], v1[:,1], v2[:,1])
+  )
+  
+  return grid_lims
 
 def NR_fractal_get_grid_lims(v_coords):
   
