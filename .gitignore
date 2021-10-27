@@ -2,6 +2,7 @@
 out/
 output/
 videos/
+__pycache__/
 
 # Datasets for different projects
 data/
