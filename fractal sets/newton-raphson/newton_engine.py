@@ -135,7 +135,7 @@ def NR_fractal_get_frames(gl_s, gl_e, n_frames=50):
 
   sg = np.sign(v_s - v_e)
   f_s = v_s - v_e
-  f_e = np.zeros_like(v_s) + 1e-06 * sg
+  f_e = np.zeros_like(v_s) + 1e-15 * sg
 
   v_coords = np.geomspace(f_s, f_e, n_frames) + v_e
   
