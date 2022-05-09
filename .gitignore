@@ -3,6 +3,7 @@ out/
 output/
 videos/
 __pycache__/
+.ipynb_checkpoints/
 
 # Datasets for different projects
 data/
